@@ -1,28 +1,23 @@
 # Santosh Kumar - Portfolio Website
 
-A modern, interactive portfolio website for a Principal Solutions Architect with integrated AI chatbot.
+A modern, interactive portfolio website for a Principal Solutions Architect with integrated AI chatbot powered by Hugging Face.
 
-## 🌐 Live Demo
+## 🌐 Live Portfolio
 
-**Portfolio**: https://ai-devops-cloud.github.io/portfolio/  
+**Custom Domain**: https://career.ai-kida.app *(after DNS setup)*  
+**GitHub Pages**: https://ai-devops-cloud.github.io/portfolio/  
 **AI Chatbot**: https://huggingface.co/spaces/techno-santy/career_conversation
 
 ## ✨ Features
 
-- 🎨 Modern React.js with animations (Framer Motion)
+- 🎨 Modern React.js with smooth animations
 - 🤖 Integrated AI chatbot from Hugging Face
-- 📧 Contact form with EmailJS integration
+- 📧 Contact form with EmailJS
 - 📱 Fully responsive design
 - ⚡ Fast loading (116KB total)
-- 🎯 Professional sections: Hero, About, Skills, Projects, Experience, Contact
+- 🔒 HTTPS secured
 
 ## 🚀 Quick Start
-
-### Prerequisites
-- Node.js (v16+)
-- npm
-
-### Installation
 
 ```bash
 # Clone repository
@@ -32,7 +27,7 @@ cd portfolio
 # Install dependencies
 npm install
 
-# Start development server
+# Start development
 npm start
 ```
 
@@ -42,38 +37,53 @@ Visit http://localhost:3000
 
 ### 1. Add Your Files
 
-**Photo**: `public/profile-photo.jpg` (500x500px, JPG/PNG)  
-**Resume**: `public/resume.pdf`
+Place these files in `public/` folder:
+- `profile-photo.jpg` - Your professional photo (500x500px)
+- `resume.pdf` - Your resume
 
-### 2. EmailJS Setup (Optional)
+### 2. EmailJS (Optional - for contact form)
 
 1. Sign up at [EmailJS.com](https://www.emailjs.com/)
-2. Create email service and template
-3. Create `.env` file:
+2. Connect email and create template
+3. Create `.env`:
 
 ```env
-REACT_APP_EMAILJS_SERVICE_ID=your_service_id
-REACT_APP_EMAILJS_TEMPLATE_ID=your_template_id
+REACT_APP_EMAILJS_SERVICE_ID=service_xxxxx
+REACT_APP_EMAILJS_TEMPLATE_ID=template_xxxxx
 REACT_APP_EMAILJS_PUBLIC_KEY=your_public_key
 ```
 
-4. Restart app
+### 3. Custom Domain (Optional)
+
+**To use career.ai-kida.app:**
+
+1. **Add DNS CNAME record** at your domain provider:
+   ```
+   Type:  CNAME
+   Name:  career
+   Value: ai-devops-cloud.github.io
+   ```
+
+2. **Configure GitHub Pages**:
+   - Go to: Settings → Pages
+   - Custom domain: `career.ai-kida.app`
+   - Save and enable HTTPS
+
+3. **Wait**: 30-60 minutes for DNS propagation
 
 ## 🚀 Deployment
 
-### GitHub Pages
-
 ```bash
-# Build and deploy
+# Deploy to GitHub Pages
 npm run deploy
 ```
 
-**Enable GitHub Pages**:
+After deployment:
 1. Go to repository Settings → Pages
 2. Select branch: `gh-pages`
-3. Click Save
+3. Save
 
-Site will be live at: `https://your-username.github.io/portfolio/`
+Site live in 2-3 minutes!
 
 ## 📁 Project Structure
 
@@ -82,49 +92,51 @@ portfolio/
 ├── public/
 │   ├── profile-photo.jpg    # Your photo
 │   ├── resume.pdf           # Your resume
+│   ├── CNAME                # Custom domain
 │   └── index.html
 ├── src/
-│   ├── components/          # React components
+│   ├── components/
 │   │   ├── Hero.js
-│   │   ├── About.js
 │   │   ├── Skills.js
 │   │   ├── Projects.js
-│   │   ├── Experience.js
-│   │   ├── Contact.js
 │   │   ├── HuggingFaceChatbot.js
 │   │   └── ...
-│   ├── App.js
-│   └── index.js
+│   └── App.js
 └── package.json
 ```
 
 ## 🛠️ Technologies
 
-- React.js
+- React.js 18
 - Framer Motion
 - EmailJS
 - Hugging Face Spaces
 - GitHub Pages
 
-## 📝 Customization
+## 🔄 Making Updates
 
-Edit components in `src/components/` to update:
-- Personal information
-- Skills and expertise
-- Projects and experience
-- Contact details
-- Social links
+```bash
+# 1. Edit files
+# 2. Test locally
+npm start
+
+# 3. Deploy
+git add .
+git commit -m "Your changes"
+git push
+npm run deploy
+```
 
 ## 📞 Contact
 
 - **Email**: pande.santosh@gmail.com
-- **LinkedIn**: [Santosh Kumar](https://linkedin.com/in/santosh-kumar)
 - **GitHub**: [ai-devops-cloud](https://github.com/ai-devops-cloud)
+- **LinkedIn**: [Santosh Kumar](https://linkedin.com/in/santosh-kumar)
 
 ## 📄 License
 
-MIT License - See LICENSE file for details
+MIT License
 
 ---
 
-**Built with ❤️ by Santosh Kumar - Principal Solutions Architect**
+**Built with ❤️ by Santosh Kumar**
