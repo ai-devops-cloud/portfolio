@@ -1,0 +1,160 @@
+.experience {
+  padding: 100px 0;
+  position: relative;
+}
+
+.experience-timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 3rem;
+}
+
+.timeline-content {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.timeline-content::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.job-header h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.job-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.job-meta span {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #a0aec0;
+  font-size: 0.9rem;
+}
+
+.job-meta svg {
+  color: #667eea;
+}
+
+.job-description {
+  color: #e2e8f0;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.achievements {
+  margin-bottom: 1.5rem;
+}
+
+.achievements h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #667eea;
+  margin-bottom: 0.75rem;
+}
+
+.achievements ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.achievements li {
+  color: #e2e8f0;
+  padding: 0.5rem 0;
+  position: relative;
+  padding-left: 1.5rem;
+  line-height: 1.5;
+}
+
+.achievements li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #48bb78;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.technologies h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #667eea;
+  margin-bottom: 0.75rem;
+}
+
+.tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tech-tag {
+  padding: 0.4rem 0.8rem;
+  background: rgba(102, 126, 234, 0.1);
+  border: 1px solid rgba(102, 126, 234, 0.3);
+  border-radius: 15px;
+  color: #667eea;
+  font-size: 0.8rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.tech-tag:hover {
+  background: rgba(102, 126, 234, 0.2);
+  transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .experience {
+    padding: 80px 0;
+  }
+  
+  .timeline-content {
+    padding: 1.5rem;
+  }
+  
+  .job-header h3 {
+    font-size: 1.3rem;
+  }
+  
+  .job-meta {
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .job-meta {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .timeline-content {
+    padding: 1rem;
+  }
+}

@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Santosh Pande - Principal Solutions Architect/Consultant/Engineer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%);
+            color: #ffffff;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+        }
+        
+        .hero-content h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .hero-content p {
+            font-size: 1.5rem;
+            color: #a0aec0;
+            margin-bottom: 2rem;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            margin: 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
+        }
+        
+        .chatbot-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 15px 20px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: 600;
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
+            transition: all 0.3s ease;
+        }
+        
+        .chatbot-btn:hover {
+            transform: translateY(-2px);
+        }
+        
+        .chatbot-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(5px);
+            z-index: 10000;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .chatbot-container {
+            width: 90%;
+            max-width: 900px;
+            height: 80vh;
+            background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+        
+        .chatbot-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1.5rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .chatbot-header h3 {
+            color: white;
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+        
+        .close-btn {
+            background: none;
+            border: none;
+            color: #a0aec0;
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 0.5rem;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+        }
+        
+        .close-btn:hover {
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+        }
+        
+        .chatbot-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+        
+        .welcome-section {
+            padding: 1.5rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            overflow: hidden;
+        }
+        
+        .welcome-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 1rem;
+            text-align: center;
+        }
+        
+        .welcome-card h4 {
+            color: #667eea;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .welcome-card p {
+            color: #a0aec0;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+        
+        .iframe-container {
+            flex: 1;
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            overflow: hidden;
+            min-height: 400px;
+        }
+        
+        .hf-iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            background: white;
+            border-radius: 12px;
+        }
+        
+        .external-links {
+            padding: 1rem 1.5rem;
+            display: flex;
+            gap: 1rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            background: rgba(255, 255, 255, 0.02);
+        }
+        
+        .external-link-btn {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 0.9rem;
+        }
+        
+        .external-link-btn.primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            flex: 1;
+        }
+        
+        .external-link-btn.primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
+        }
+        
+        .external-link-btn.secondary {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: #a0aec0;
+        }
+        
+        .external-link-btn.secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            transform: translateY(-2px);
+        }
+        
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero-content p {
+                font-size: 1.2rem;
+            }
+            
+            .chatbot-container {
+                width: 95%;
+                height: 90vh;
+            }
+            
+            .external-links {
+                flex-direction: column;
+                gap: 0.75rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Hi, I'm Santosh Pande</h1>
+                <p>Principal Solutions Architect</p>
+                <p style="font-size: 1rem; color: #a0aec0; margin-bottom: 2rem;">
+                    Cloud • DevOps • AI • Infrastructure • Leadership
+                </p>
+                <a href="#about" class="btn">Learn More</a>
+                <a href="https://huggingface.co/spaces/techno-santy/career_conversation" target="_blank" class="btn">Try AI Assistant</a>
+            </div>
+        </div>
+    </div>
+    
+    <button class="chatbot-btn" onclick="openChatbot()">
+        🤖 AI Assistant
+    </button>
+    
+    <div id="chatbotModal" class="chatbot-modal">
+        <div class="chatbot-container">
+            <div class="chatbot-header">
+                <h3>🤖 AI Career Assistant</h3>
+                <button class="close-btn" onclick="closeChatbot()">×</button>
+            </div>
+            <div class="chatbot-content">
+                <div class="welcome-section">
+                    <div class="welcome-card">
+                        <h4>🤖 Meet Your AI Career Assistant</h4>
+                        <p>This AI assistant is trained on my LinkedIn profile and professional experience. It can answer questions about my expertise in cloud architecture, DevOps, AI, infrastructure, security, and leadership.</p>
+                    </div>
+                    <div class="iframe-container">
+                        <iframe
+                            src="https://huggingface.co/spaces/techno-santy/career_conversation"
+                            title="AI Career Assistant"
+                            class="hf-iframe"
+                            allow="microphone"
+                        />
+                    </div>
+                </div>
+                <div class="external-links">
+                    <a href="https://huggingface.co/spaces/techno-santy/career_conversation" target="_blank" class="external-link-btn primary">
+                        🔗 Open Full Experience
+                    </a>
+                    <a href="https://github.com/techno-santy" target="_blank" class="external-link-btn secondary">
+                        📁 View Source Code
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        function openChatbot() {
+            document.getElementById('chatbotModal').style.display = 'flex';
+        }
+        
+        function closeChatbot() {
+            document.getElementById('chatbotModal').style.display = 'none';
+        }
+        
+        // Close modal when clicking outside
+        document.getElementById('chatbotModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeChatbot();
+            }
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+
