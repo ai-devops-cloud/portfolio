@@ -1,94 +1,90 @@
 # Santosh Kumar - Portfolio Website
 
-A modern, interactive portfolio website showcasing expertise as a Principal Solutions Architect, featuring an integrated AI-powered chatbot from Hugging Face.
+A modern, interactive portfolio website for a Principal Solutions Architect with integrated AI chatbot.
 
-## 🚀 Live Demo
+## 🌐 Live Demo
 
-- **Portfolio Website**: [https://techno-santy.github.io/santosh-portfolio](https://techno-santy.github.io/santosh-portfolio)
-- **AI Chatbot**: [https://huggingface.co/spaces/techno-santy/career_conversation](https://huggingface.co/spaces/techno-santy/career_conversation)
+**Portfolio**: https://ai-devops-cloud.github.io/portfolio/  
+**AI Chatbot**: https://huggingface.co/spaces/techno-santy/career_conversation
 
 ## ✨ Features
 
-### Frontend
-- **Modern React.js Interface** - Responsive, animated UI with Framer Motion
-- **Interactive Sections** - Hero, About, Skills, Projects, Experience, Contact
-- **Integrated AI Chatbot** - Live chatbot embedded from Hugging Face Spaces
-- **Particle Background** - Dynamic visual effects with interactive particles
-- **Mobile Responsive** - Optimized for all devices and screen sizes
+- 🎨 Modern React.js with animations (Framer Motion)
+- 🤖 Integrated AI chatbot from Hugging Face
+- 📧 Contact form with EmailJS integration
+- 📱 Fully responsive design
+- ⚡ Fast loading (116KB total)
+- 🎯 Professional sections: Hero, About, Skills, Projects, Experience, Contact
 
-### AI Integration
-- **Hugging Face Integration** - Embedded live AI chatbot
-- **Career-Focused AI** - Specialized in answering questions about professional background
-- **LinkedIn Data Training** - AI trained on LinkedIn profile information
-- **Real-time Responses** - Live interaction with AI assistant
-
-### Technologies
-- **Frontend**: React.js, Framer Motion, CSS3, HTML5
-- **AI/ML**: Hugging Face Spaces, AI Chatbot
-- **Deployment**: GitHub Pages
-- **Version Control**: Git, GitHub
-
-## 🛠️ Local Development
+## 🚀 Quick Start
 
 ### Prerequisites
-- Node.js (v16 or higher)
-- npm or yarn
+- Node.js (v16+)
+- npm
 
 ### Installation
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/techno-santy/santosh-portfolio.git
-   cd santosh-portfolio
-   ```
+```bash
+# Clone repository
+git clone https://github.com/ai-devops-cloud/portfolio.git
+cd portfolio
 
-2. **Install dependencies**
-   ```bash
-   npm install
-   ```
+# Install dependencies
+npm install
 
-3. **Start development server**
-   ```bash
-   npm start
-   ```
+# Start development server
+npm start
+```
 
-4. **Open your browser**
-   ```
-   http://localhost:3000
-   ```
+Visit http://localhost:3000
+
+## 📋 Setup
+
+### 1. Add Your Files
+
+**Photo**: `public/profile-photo.jpg` (500x500px, JPG/PNG)  
+**Resume**: `public/resume.pdf`
+
+### 2. EmailJS Setup (Optional)
+
+1. Sign up at [EmailJS.com](https://www.emailjs.com/)
+2. Create email service and template
+3. Create `.env` file:
+
+```env
+REACT_APP_EMAILJS_SERVICE_ID=your_service_id
+REACT_APP_EMAILJS_TEMPLATE_ID=your_template_id
+REACT_APP_EMAILJS_PUBLIC_KEY=your_public_key
+```
+
+4. Restart app
 
 ## 🚀 Deployment
 
 ### GitHub Pages
 
-The website is automatically deployed to GitHub Pages using GitHub Actions.
+```bash
+# Build and deploy
+npm run deploy
+```
 
-1. **Build the project**
-   ```bash
-   npm run build
-   ```
+**Enable GitHub Pages**:
+1. Go to repository Settings → Pages
+2. Select branch: `gh-pages`
+3. Click Save
 
-2. **Deploy to GitHub Pages**
-   ```bash
-   npm run deploy
-   ```
+Site will be live at: `https://your-username.github.io/portfolio/`
 
-### Manual Deployment
-
-1. Build the project: `npm run build`
-2. Upload the `build` folder contents to your web server
-3. Configure your server to serve the React app
-
-## 🎯 Project Structure
+## 📁 Project Structure
 
 ```
-santosh-portfolio/
+portfolio/
 ├── public/
-│   ├── index.html
-│   └── manifest.json
+│   ├── profile-photo.jpg    # Your photo
+│   ├── resume.pdf           # Your resume
+│   └── index.html
 ├── src/
-│   ├── components/
-│   │   ├── Navbar.js
+│   ├── components/          # React components
 │   │   ├── Hero.js
 │   │   ├── About.js
 │   │   ├── Skills.js
@@ -96,88 +92,38 @@ santosh-portfolio/
 │   │   ├── Experience.js
 │   │   ├── Contact.js
 │   │   ├── HuggingFaceChatbot.js
-│   │   ├── Footer.js
-│   │   └── ParticleBackground.js
+│   │   └── ...
 │   ├── App.js
-│   ├── App.css
-│   ├── index.js
-│   └── index.css
-├── package.json
-└── README.md
+│   └── index.js
+└── package.json
 ```
 
-## 🤖 AI Chatbot Integration
+## 🛠️ Technologies
 
-The portfolio features an integrated AI chatbot powered by Hugging Face Spaces:
+- React.js
+- Framer Motion
+- EmailJS
+- Hugging Face Spaces
+- GitHub Pages
 
-- **Embedded iframe** - Direct integration with Hugging Face app
-- **Career-focused responses** - AI trained on LinkedIn profile data
-- **Interactive interface** - Voice input and quick questions
-- **Real-time communication** - Live responses from AI model
+## 📝 Customization
 
-### Chatbot Features
-- 📄 LinkedIn profile data integration
-- 🤖 Advanced AI conversation capabilities
-- 🎯 Specialized in career and technical questions
-- 🔄 Real-time responses
-- 📱 Mobile-friendly interface
-
-## 🎨 Customization
-
-### Content Updates
-- Edit components in `src/components/` to update content
-- Modify skills, projects, and experience sections
-- Update contact information and social links
-
-### Styling
-- Customize CSS files for different themes
-- Update color schemes in CSS variables
-- Add custom animations with Framer Motion
-
-### AI Chatbot
-- Update Hugging Face Space URL in `HuggingFaceChatbot.js`
-- Modify chatbot interface and features
-- Customize quick questions and responses
-
-## 📱 Responsive Design
-
-The website is fully responsive and optimized for:
-- Desktop (1200px+)
-- Tablet (768px - 1199px)
-- Mobile (320px - 767px)
-
-## 🔧 Available Scripts
-
-- `npm start` - Start development server
-- `npm run build` - Build for production
-- `npm run deploy` - Deploy to GitHub Pages
-- `npm test` - Run tests
-- `npm run eject` - Eject from Create React App
-
-## 🌐 Browser Support
-
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 🙏 Acknowledgments
-
-- [Hugging Face](https://huggingface.co/) for AI chatbot platform
-- [React](https://reactjs.org/) for the frontend framework
-- [Framer Motion](https://www.framer.com/motion/) for animations
-- [React Icons](https://react-icons.github.io/react-icons/) for icons
+Edit components in `src/components/` to update:
+- Personal information
+- Skills and expertise
+- Projects and experience
+- Contact details
+- Social links
 
 ## 📞 Contact
 
-- **Email**: santosh@example.com
+- **Email**: pande.santosh@gmail.com
 - **LinkedIn**: [Santosh Kumar](https://linkedin.com/in/santosh-kumar)
-- **GitHub**: [techno-santy](https://github.com/techno-santy)
-- **Twitter**: [@techno_santy](https://twitter.com/techno_santy)
+- **GitHub**: [ai-devops-cloud](https://github.com/ai-devops-cloud)
+
+## 📄 License
+
+MIT License - See LICENSE file for details
 
 ---
 
