@@ -64,7 +64,7 @@ function App() {
   }
 
   return (
-    <Router basename="/portfolio">
+    <Router>
       <div className="App">
         <ParticleBackground />
         <Navbar chatbotOpen={chatbotOpen} setChatbotOpen={setChatbotOpen} />

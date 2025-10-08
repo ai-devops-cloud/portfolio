@@ -11,7 +11,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
-  "homepage": "https://techno-santy.github.io/portfolio",
+  "homepage": "https://career.ai-kida.app",
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
     "ajv": "^8.17.1",
