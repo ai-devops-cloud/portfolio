@@ -197,7 +197,7 @@ const Hero = () => {
                   <div className="avatar-ring-inner">
                     <div className="avatar-placeholder">
                       <img 
-                        src="/profile-photo.jpg" 
+                        src={`${process.env.PUBLIC_URL}/profile-photo.jpg`}
                         alt="Santosh Pande" 
                         className="profile-photo"
                         onError={(e) => {
