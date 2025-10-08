@@ -1,0 +1,109 @@
+═══════════════════════════════════════════════════════════════
+  📁 PUBLIC FOLDER - ADD YOUR FILES HERE
+═══════════════════════════════════════════════════════════════
+
+This folder contains all public assets for your portfolio website.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📸 STEP 1: ADD YOUR PHOTO
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+File to add:
+  📷 profile-photo.jpg
+  
+Full path:
+  C:\Users\santosh\Documents\Projects\Portfolio\public\profile-photo.jpg
+
+Requirements:
+  ✓ Professional headshot
+  ✓ Square format (500x500px recommended)
+  ✓ JPG or PNG format
+  ✓ File size: Under 500KB
+  
+Result:
+  → Your photo appears in circular avatar on home page
+  → With beautiful gradient border
+  → No rotation (static display)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📄 STEP 2: ADD YOUR RESUME
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+File to add:
+  📋 resume.pdf
+  
+Full path:
+  C:\Users\santosh\Documents\Projects\Portfolio\public\resume.pdf
+
+Requirements:
+  ✓ PDF format only
+  ✓ File size: Under 2MB
+  ✓ 1-2 pages recommended
+  
+Result:
+  → Visitors can download your resume
+  → "Download Resume" button works on home page
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📧 STEP 3: SETUP EMAIL FORM
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+See: EMAILJS_SETUP_GUIDE.md
+
+Quick steps:
+  1. Go to https://www.emailjs.com/
+  2. Create free account
+  3. Connect Gmail/Outlook
+  4. Create email template
+  5. Get 3 keys
+  6. Create .env file in project root
+  7. Add keys to .env
+  8. Restart app
+
+Result:
+  → Contact form sends real emails to your inbox!
+  → 200 free emails/month
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🎯 QUICK REFERENCE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Current folder structure:
+
+public/
+├── profile-photo.jpg     ← ADD THIS (your photo)
+├── resume.pdf            ← ADD THIS (your resume)
+├── index.html            ✓ Already there
+├── manifest.json         ✓ Already there
+└── ADD_FILES_HERE.txt    ← You are here
+
+Root folder:
+├── .env                  ← CREATE THIS (EmailJS keys)
+├── env.example          ✓ Template provided
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✅ THAT'S IT!
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Just add these 3 things:
+  1. profile-photo.jpg (this folder)
+  2. resume.pdf (this folder)
+  3. .env file (project root - see EMAILJS_SETUP_GUIDE.md)
+
+Then your portfolio is 100% complete! 🎉
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Need help? Check these guides:
+  → ADD_PHOTO_GUIDE.md
+  → EMAILJS_SETUP_GUIDE.md
+  → FINAL_SETUP_INSTRUCTIONS.md
+
+Your portfolio is live at: http://localhost:3000
+
+═══════════════════════════════════════════════════════════════
