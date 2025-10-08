@@ -100,8 +100,10 @@ const Hero = () => {
               className="hero-actions"
             >
               <motion.a
-                href="/resume.pdf"
-                download
+                href={`${process.env.PUBLIC_URL}/resume.pdf`}
+                download="Santosh_Kumar_Resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="btn-primary"
