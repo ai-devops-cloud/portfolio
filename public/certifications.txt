@@ -1,0 +1,25 @@
+Certified Kubernetes Adminstrator (CKA) 
+AWS Certified Solution Architect Professional
+AWS Certified Advanced Networking - Specialty
+AWS Certified Security - Specialty
+AWS Certified Solution Architect Associate
+Google Professional Cloud Architect Certified 
+Microsoft Certified: Azure DevOps Engineer Expert (AZ 400)
+AZ-305 Designing Microsoft Azure Infrastructure Solutions
+AZ-700 - Designing and Implementing Microsoft Azure Networking Solutions
+AZ-500 – Microsoft Azure Security Technologies 
+Microsoft Certified: Azure Administrator Associate
+VMware certified vCloud Professional – 
+VMware vSphere 5 Certified Professional 
+VMWare vSphere Certified Professional (VCP410)(VCP310)VTSP, VSP
+VCP vCloud (VCP 510) Certified 
+Ethical Hacking and Counter measures (CEH v5)
+Cisco Certified Professional (CCNA)
+Check Point Certified Professional (CCSA)
+Netapp Certified Implementation Engineer (SAN & Virtualization)
+NetApp Certified Data Management Administrator
+SNIA Storage Network Foundations (S10-100)
+ITIL v2 Foundation Certified 
+IBM WebSphere Application Server Network Deployment V6.1
+IBM Tivoli Access Manager 6.0
+eTrust SSO (Single Sign On) certified from CA 
